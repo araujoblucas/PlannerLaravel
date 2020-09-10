@@ -7,6 +7,13 @@
             <div class="card">
                 <div class="card-header">{{ __('Dashboard') }}</div>
 
+                <form method="post" action="{{ route('logout') }}">
+                    @method('post')
+                    @csrf
+                    <button type="submit">
+                            DESLOGATIOn
+                    </button>
+                </form>
                 <div class="card-body">
                     @if (session('status'))
                         <div class="alert alert-success" role="alert">

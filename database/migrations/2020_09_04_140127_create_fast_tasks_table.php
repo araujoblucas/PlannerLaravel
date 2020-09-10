@@ -17,6 +17,7 @@ class CreateFastTasksTable extends Migration
             $table->id();
             $table->text('fast_task');
             $table->boolean('completed');
+            $table->boolean('visible');
             $table->unsignedBigInteger('owner_id');
             $table->foreign('owner_id')
                 ->references('id')
